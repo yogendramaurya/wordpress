@@ -5,7 +5,7 @@
  * @package Simple Persona
  */
 
-$enable_section = get_theme_mod( 'simple_persona_hero_content_visibility', 'disabled' );
+$enable_section = get_theme_mod( 'simple_persona_hero_content_visibility', 'enabled' );
 
 if ( ! simple_persona_check_section( $enable_section ) ) {
 	// Bail if hero content is not enabled

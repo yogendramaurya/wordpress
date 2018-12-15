@@ -1,0 +1,29 @@
+.allex-highlight.upstream a,
+.allex-highlight.upstream,
+a#upstream-upgrade-link,
+#toplevel_page_upstream_general li.upstream-extensions a {
+    color: #5facd2 !important;
+    font-weight: bold;
+}
+
+.upstream_options .cmb-th + .cmb-td {
+    width: calc(100% - 250px);
+}
+
+.upstream_float_success {
+    padding-left: 10px;
+    line-height: 28px;
+}
+
+.upstream_float_error {
+    padding-left: 10px;
+    line-height: 28px;
+}
+
+.allex-success-message {
+    color: darkgreen;
+    background: #beffe3;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}

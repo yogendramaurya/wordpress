@@ -1,0 +1,48 @@
+<div id="allex_subscription_ad">
+    <div class="header">
+        <img src="{{ image_src }}" />
+    </div>
+
+    <div class="content">
+
+        <h3>{{ text.title }}</h3>
+        <p>{{ text.thanks }}</p>
+
+        {# Based on Mailchimp's embeded subscription form #}
+        <form class="form-horizontal validate" action="{{ action_url|raw }}" method="post" target="_blank">
+            <div class="control-group">
+                <label for="mce-EMAIL">{{ text.email_address }}  <span class="asterisk">*</span></label>
+
+                <div class="controls">
+                    <input type="email" value="" name="EMAIL" class="required email form-control regular-text" id="mce-EMAIL" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="mce-FNAME">{{ text.first_name }} </label>
+
+                <div class="controls">
+                    <input type="text" value="" name="FNAME" class="form-control regular-text" id="mce-FNAME">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="mce-LNAME">{{ text.last_name }} </label>
+
+                <div class="controls">
+                    <input type="text" value="" name="LNAME" class="form-control regular-text" id="mce-LNAME">
+                </div>
+            </div>
+
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="{{ mailchimp_config.code }}" tabindex="-1" value="">
+                <input type="hidden" name="group[{{ mailchimp_config.id }}][{{ mailchimp_config.group_id }}]" id="mce-group[{{ mailchimp_config.id }}]-{{ mailchimp_config.id }}-{{ mailchimp_config.group_id }}" tabindex="-1" value="2">
+            </div>
+
+            <button type="submit" class="button-primary">{{ text.yes_send_me }}</button>
+        </form>
+    </div>
+</div>
